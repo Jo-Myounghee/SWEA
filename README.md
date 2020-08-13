@@ -22,6 +22,16 @@
 
 [1948][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1948.md]
 
+### 1961. 숫자 배열 회전
+
+[1961][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1961.md]
+
+### 1966. 숫자를 정렬하자
+
+[1966][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1966.md]
+
+
+
 ## 🔹 D3
 
 ## 🔹 D4
