@@ -30,7 +30,9 @@
 
 [1966][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1966.md]
 
+### 1979. 어디에 단어가 들어갈 수 있을까
 
+[1979][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1979.md]
 
 ## 🔹 D3
 
