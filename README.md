@@ -50,7 +50,7 @@
 
 [1979][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1979.md]
 
-### 2005. 파스칼의 삼각형
+### 💬 2005. 파스칼의 삼각형
 
 [2005][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_2005.md]
 
