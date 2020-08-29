@@ -148,7 +148,7 @@
 
 2-9. C 데이터 집합에 추가된 요소는 기존의 데이터 집합에서 삭제
 
-![13](Divide and Conquer.assets/13.png)
+![](Divide and Conquer.assets/13-1598696290208.png)
 
 ### 2. 퀵 정렬 (Quick Sort)
 
