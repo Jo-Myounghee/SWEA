@@ -79,18 +79,18 @@
 
 0. 데이터 집합 준비
 
-![](Divide and Conquer.assets/0.png)
+![](./Divide and Conquer.assets/0.png)
 
 1. 데이터 집합을 반으로 나누고, 같은 집합에서 나뉘어져 나온 데이터 집합 둘을 병합하여 하나의 데이터 집합으로 만든다. (Divide)
 
 - 색을 칠한 부분은 나누는 기준이 되는 부분
 
-![](Divide and Conquer.assets/1-1598695485593.png)
+![](./Divide and Conquer.assets/1-1598695485593.png)
 
 2. 같은 집합에서 나뉘어져 나온 데이터 집합 둘을 병합하여 하나의 데이터 집합으로 만든다. (Conquer & Combine)
    - 주의할 점 : 병합 시 데이터 집합의 원소는 순서에 맞춰 정렬
 
-![](Divide and Conquer.assets/2.png)
+![](./Divide and Conquer.assets/2.png)
 
 #### Conquer & Combine 과정 상세 설명
 
@@ -108,47 +108,47 @@
 
 1. 두 데이터 집합의 크기의 합만큼의 크기를 갖는 빈 데이터 집합을 만든다.
 
-![](Divide and Conquer.assets/3.png)
+![](./Divide and Conquer.assets/3.png)
 
 2. 첫 번째 요소들을 비교해서 작은 요소를 빈 데이터 집합에 추가
 
-![](Divide and Conquer.assets/4.png)
+![](./Divide and Conquer.assets/4.png)
 
 2-1. C 데이터 집합에 추가된 요소는 기존의 데이터 집합에서 삭제 후, 각각의 데이터 집합의 첫번째 요소끼리 비교
 
-![](Divide and Conquer.assets/5.png)
+![](./Divide and Conquer.assets/5.png)
 
 2-2. C 데이터 집합에 추가된 요소는 기존의 데이터 집합에서 삭제 후, 각각의 데이터 집합의 첫번째 요소끼리 비교
 
-![](Divide and Conquer.assets/6.png)
+![](./Divide and Conquer.assets/6.png)
 
 2-3. C 데이터 집합에 추가된 요소는 기존의 데이터 집합에서 삭제 후, 각각의 데이터 집합의 첫번째 요소끼리 비교
 
-![](Divide and Conquer.assets/7.png)
+![](./Divide and Conquer.assets/7.png)
 
 2-4. C 데이터 집합에 추가된 요소는 기존의 데이터 집합에서 삭제 후, 각각의 데이터 집합의 첫번째 요소끼리 비교
 
-![](Divide and Conquer.assets/8.png)
+![](./Divide and Conquer.assets/8.png)
 
 2-5. C 데이터 집합에 추가된 요소는 기존의 데이터 집합에서 삭제 후, 각각의 데이터 집합의 첫번째 요소끼리 비교
 
-![](Divide and Conquer.assets/9.png)
+![](./Divide and Conquer.assets/9.png)
 
 2-6. C 데이터 집합에 추가된 요소는 기존의 데이터 집합에서 삭제 후, 각각의 데이터 집합의 첫번째 요소끼리 비교
 
-![10](Divide and Conquer.assets/10.png)
+![10](./Divide and Conquer.assets/10.png)
 
 2-7. C 데이터 집합에 추가된 요소는 기존의 데이터 집합에서 삭제 후, 각각의 데이터 집합의 첫번째 요소끼리 비교
 
-![](Divide and Conquer.assets/11-1598695668370.png)
+![](./Divide and Conquer.assets/11-1598695668370.png)
 
 2-8. 요소가 한 개만 남아있으므로, 해당 요소를 C 데이터 집합에 추가
 
-![](Divide and Conquer.assets/12.png)
+![](./Divide and Conquer.assets/12.png)
 
 2-9. C 데이터 집합에 추가된 요소는 기존의 데이터 집합에서 삭제
 
-![](Divide and Conquer.assets/13-1598696290208.png)
+![](./Divide and Conquer.assets/13-1598696290208.png)
 
 ### 2. 퀵 정렬 (Quick Sort)
 
@@ -176,39 +176,39 @@
 
 0. 데이터 집합 준비
 
-![](Divide and Conquer.assets/14.png)
+![](./Divide and Conquer.assets/14.png)
 
 1. pivot 선정 (임의의 원소 선정) : 64
    - 이 때, pivot의 위치는 변하지 않는다.
 
-![15](Divide and Conquer.assets/15.png)
+![15](./Divide and Conquer.assets/15.png)
 
 2. pivot을 기준으로 divide
 
-![16](Divide and Conquer.assets/16.png)
+![16](./Divide and Conquer.assets/16.png)
 
 3. pivot 선정 : 23, 86 (임의로 선정)
    - 이 때, pivot의 위치는 변하지 않는다.
 
-![17](Divide and Conquer.assets/17.png)
+![17](./Divide and Conquer.assets/17.png)
 
 4. pivot을 기준으로 divide
    - 1, 77, 91은 정렬 완료 (파란색으로 표시)
 
-![18](Divide and Conquer.assets/18.png)
+![18](./Divide and Conquer.assets/18.png)
 
 5. pivot 선정 : 45 (임의로 선정)
    - 이 때, pivot의 위치는 변하지 않는다.
 
-![19](Divide and Conquer.assets/19.png)
+![19](./Divide and Conquer.assets/19.png)
 
 6. pivot을 기준으로 divide
 
-![](Divide and Conquer.assets/21.png)
+![](./Divide and Conquer.assets/21.png)
 
 7. 정렬 완료
 
-![](Divide and Conquer.assets/20.png)
+![](./Divide and Conquer.assets/20.png)
 
 ### 3. 거듭 제곱 (Exponentiation)
 
@@ -259,27 +259,27 @@ $$
 
 0. 정렬된 배열
 
-![](Divide and Conquer.assets/22.png)
+![](./Divide and Conquer.assets/22.png)
 
 1. 중간 값(`17`)을 기준으로 2개의 리스트로 분할
 
-![](Divide and Conquer.assets/23.png)
+![](./Divide and Conquer.assets/23.png)
 
 2. 찾고자 하는 값(`21`)이 중간 값(`17`)보다 크므로 왼쪽은 사용 X
 
-![](Divide and Conquer.assets/24.png)
+![](./Divide and Conquer.assets/24.png)
 
 3. 중간 값(`25`)을 기준으로 2개의 리스트로 분할
 
-![](Divide and Conquer.assets/25.png)
+![](./Divide and Conquer.assets/25.png)
 
 4. 중간 값(`25`)보다 찾고자 하는 값(`21`)이 더 작으므로 오른쪽은 사용 X
 
-![](Divide and Conquer.assets/26.png)
+![](./Divide and Conquer.assets/26.png)
 
 5. 값 찾기
 
-![](Divide and Conquer.assets/27.png)
+![](./Divide and Conquer.assets/27.png)
 
 
 
@@ -289,15 +289,15 @@ $$
 
 0. 정렬되지 않은 리스트
 
-![](Divide and Conquer.assets/28.png)
+![](./Divide and Conquer.assets/28.png)
 
 1. 분할하기(Divide)
 
-![](Divide and Conquer.assets/29.png)
+![](./Divide and Conquer.assets/29.png)
 
 2. 해결하며 합치기 (Conquer & Combine)
 
-![](Divide and Conquer.assets/30.png)
+![](./Divide and Conquer.assets/30.png)
 
 ## 출처
 
