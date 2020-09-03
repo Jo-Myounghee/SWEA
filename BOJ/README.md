@@ -33,8 +33,8 @@
 |           |   2669    | 직사각형 네개의 합집합의 면적 구하기 |                                                              |
 |           |   10157   | 자리배정                             |                                                              |
 |           |   10158   | 개미                                 |                                                              |
-|           |   10163   | 색종이                               |                                                              |
-|           |   13300   | 방배정                               |                                                              |
+|     O     |   10163   | 색종이                               | https://github.com/Jo-Myounghee/BOJ/blob/master/BOJ/BOJ_10163.md |
+|     O     |   13300   | 방배정                               | https://github.com/Jo-Myounghee/BOJ/blob/master/BOJ/BOJ_13300.md |
 |     O     |   14696   | 딱지놀이                             | https://github.com/Jo-Myounghee/BOJ/blob/master/BOJ/BOJ_14696.md |
 
 
