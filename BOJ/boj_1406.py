@@ -6,27 +6,18 @@ L
 P y
 '''
 from sys import stdin
-words = list(stdin.readline().rstrip('\n'))
-N = int(stdin.readline().rstrip('\n'))
-Given = [list(map(str, stdin.readline().rstrip('\n').split())) for _ in range(N)]
+text = list(stdin.readline().rstrip('\n'))
+input()
 temp = []
+for command in stdin:
+    if command[0] == 'L' and text:
+        temp.append(text.pop())
+    elif command[0] == 'R' and temp:
+        text.append(temp.pop())
+    elif command[0] == 'B' and text:
+        text.pop()
+    elif command[0] == 'P':
+        text.append(command[2])
 
-keys = ['L', 'D', 'B', 'P']
-for i in range(N):
-    if Given[i][0] == keys[0]:
-        if len(words) > 0:
-            temp.append(words.pop())
-    elif Given[i][0] == keys[1]:
-        if len(temp) > 0:
-            words.append(temp.pop())
-    elif Given[i][0] == keys[2]:
-        if len(words) > 0:
-            words.pop()
-    elif Given[i][0] == keys[3]:
-        words.append(Given[i][1])
-
-while len(temp) > 0:
-    words.append(temp.pop())
-
-print(''.join(words))
+print(''.join(text+temp[::-1]))
 
