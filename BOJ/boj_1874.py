@@ -9,8 +9,9 @@
 2
 1
 '''
-N = int(input())
-given_lst = [int(input()) for _ in range(N)]
+from sys import stdin
+N = int(stdin.readline())
+given_lst = [int(stdin.readline()) for _ in range(N)]
 numbers = list(range(N, 0, -1))
 stack = [0]
 result = []
