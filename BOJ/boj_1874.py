@@ -32,6 +32,4 @@ for i in range(N):
         print_lst.append('-')
 
 if flag:
-    for i in print_lst:
-        print(i)
-
+    print('\n'.join(print_lst))
