@@ -7,7 +7,8 @@ P y
 '''
 from sys import stdin
 text = list(stdin.readline().rstrip('\n'))
-input()
+N = int(stdin.readline().rstrip('\n'))
+cnt = 0
 temp = []
 for command in stdin:
     if command[0] == 'L' and text:
@@ -18,6 +19,9 @@ for command in stdin:
         text.pop()
     elif command[0] == 'P':
         text.append(command[2])
+    cnt += 1
+    if cnt == N:
+        break
 
 print(''.join(text+temp[::-1]))
 
