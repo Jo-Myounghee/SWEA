@@ -38,7 +38,8 @@
 |     O     |   13300   | 방배정                               | https://github.com/Jo-Myounghee/BOJ/blob/master/BOJ/BOJ_13300.md |                                    |
 |     O     |   14696   | 딱지놀이                             | https://github.com/Jo-Myounghee/BOJ/blob/master/BOJ/BOJ_14696.md | counter                            |
 |     O     |   1934    | 최소공배수                           | https://github.com/Jo-Myounghee/BOJ/blob/master/BOJ/BOJ_1934.md | sys.stdout.write, gcd              |
-|     O     |   9095    | 최대약수와 최소공배수                | https://github.com/Jo-Myounghee/BOJ/blob/master/BOJ/BOJ_9095 |                                    |
+|     O     |   9095    | 최대약수와 최소공배수                | https://github.com/Jo-Myounghee/BOJ/blob/master/BOJ/BOJ_9095.md |                                    |
+|     O     |   1978    | 소수 찾기                            | https://github.com/Jo-Myounghee/BOJ/blob/master/BOJ/BOJ_1978.md |                                    |
 
 
 
