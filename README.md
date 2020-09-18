@@ -57,6 +57,10 @@
 
 ## 🔹 D3
 
+### 2805. 농작물 수확하기
+
+[2805][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D3/swea_2805.md]
+
 ## 🔹 D4
 
 ## 🔹 D5
