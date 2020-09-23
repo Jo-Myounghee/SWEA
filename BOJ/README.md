@@ -18,14 +18,14 @@
 | :-------: | :-------: | :----------------------------------- | :----------------------------------------------------------- | ---------------------------------- |
 |     O     |   1874    | 스택 수열                            | https://github.com/Jo-Myounghee/morigorithm/blob/master/BOJ/BOJ_1874.md | lambda function, sys.stdin, rstrip |
 |           |   1244    | 스위치 켜고 끄기                     |                                                              |                                    |
-|           |   2116    | 주사위 쌓기                          |                                                              |                                    |
+|     O     |   2116    | 주사위 쌓기                          | https://github.com/Jo-Myounghee/morigorithm/blob/master/BOJ/BOJ_2116.md |                                    |
 |           |   2304    | 창고 다각형                          |                                                              |                                    |
 |           |   2309    | 일곱 난쟁이                          |                                                              |                                    |
 |           |   2477    | 참외밭                               |                                                              |                                    |
 |           |   2491    | 수열                                 |                                                              |                                    |
 |           |   2527    | 직사각형                             |                                                              |                                    |
 |           |   2559    | 수열                                 |                                                              |                                    |
-|           |   2563    | 색종이                               |                                                              |                                    |
+|     O     |   2563    | 색종이                               | https://github.com/Jo-Myounghee/morigorithm/blob/master/BOJ/BOJ_2563.md |                                    |
 |           |   2564    | 경비원                               |                                                              |                                    |
 |           |   2578    | 빙고                                 |                                                              |                                    |
 |           |   2605    | 줄 세우기                            |                                                              |                                    |
