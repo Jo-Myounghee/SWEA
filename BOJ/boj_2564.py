@@ -23,8 +23,5 @@ SUM = 0
 for i in range(N):
     wat = abs(sp - shop[i])
     rwat = TOT - wat
-    if wat >= rwat:
-        SUM += rwat
-    else:
-        SUM += wat
+    SUM += min(wat, rwat)
 print(SUM)
