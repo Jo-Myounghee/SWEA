@@ -26,7 +26,7 @@
 |           |   2527    | 직사각형                             |                                                              |                                    |
 |           |   2559    | 수열                                 |                                                              |                                    |
 |     O     |   2563    | 색종이                               | https://github.com/Jo-Myounghee/morigorithm/blob/master/BOJ/BOJ_2563.md |                                    |
-|           |   2564    | 경비원                               |                                                              |                                    |
+|     O     |   2564    | 경비원                               | https://github.com/Jo-Myounghee/morigorithm/blob/master/BOJ/BOJ_2564.md | min                                |
 |           |   2578    | 빙고                                 |                                                              |                                    |
 |           |   2605    | 줄 세우기                            |                                                              |                                    |
 |           |   2628    | 종이자르기                           |                                                              |                                    |
