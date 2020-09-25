@@ -32,7 +32,7 @@
 |           |   2628    | 종이자르기                           |                                                              |                                    |
 |           |   2635    | 수 이어가기                          |                                                              |                                    |
 |           |   2669    | 직사각형 네개의 합집합의 면적 구하기 |                                                              |                                    |
-|           |   10157   | 자리배정                             |                                                              |                                    |
+|     O     |   10157   | 자리배정                             | https://github.com/Jo-Myounghee/morigorithm/blob/master/BOJ/BOJ_10157.md | exit(0)                            |
 |     O     |   10158   | 개미                                 | https://github.com/Jo-Myounghee/morigorithm/blob/master/BOJ/BOJ_10158.md | eval                               |
 |     O     |   10163   | 색종이                               | https://github.com/Jo-Myounghee/BOJ/blob/master/BOJ/BOJ_10163.md |                                    |
 |     O     |   13300   | 방배정                               | https://github.com/Jo-Myounghee/BOJ/blob/master/BOJ/BOJ_13300.md |                                    |
