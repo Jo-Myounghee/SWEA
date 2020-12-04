@@ -7,12 +7,20 @@ def solution(words, queries):
             if len(i) != len(j):
                 continue
             else:
-                for k in range(len(i)):
-                    if i[k] != '?' and i[k] != j[k]:
-                        no_same = True
-                        break
-                if not no_same:
+                k = 0
+                # 효율성 테케3이 ?????인 글자인듯
+                if i == '?'*len(i):
                     cnt += 1
+                elif i[k] == '?':
+                    while i[k] == '?':
+                        k += 1
+                    if i[k:] == j[k:]:
+                        cnt += 1
+                else:
+                    while i[k] != '?':
+                        k += 1
+                    if i[:k] == j[:k]:
+                        cnt += 1
         answer.append(cnt)
     return answer
 
