@@ -1,25 +1,28 @@
 def solution(words, queries):
-    answer = []
-    for i in queries:
+    answer = [0] * len(queries)
+    for i in range(len(queries)):
+
         cnt = 0
         for j in words:
-            if len(i) != len(j):
+            if len(queries[i]) != len(j):
                 continue
             else:
                 k = 0
-                if i == '?'*len(i):
+                if queries[i] == '?'*len(queries[i]):
                     cnt += 1
 
-                elif i[k] == '?':
-                    temp_word = i[::-1]
+                elif queries[i][k] == '?':
+                    temp_word = queries[i][::-1]
                     k = len(j) - temp_word.index('?')
-                    if i[k:] == j[k:]:
+                    if queries[i][k:] == j[k:]:
                         cnt += 1
+
                 else:
-                    k = i.index('?')
-                    if i[:k] == j[:k]:
+                    k = queries[i].index('?')
+                    if queries[i][:k] == j[:k]:
                         cnt += 1
-        answer.append(cnt)
+
+        answer[i] = cnt
     return answer
 
 print(solution(["frodo", "front", "frost", "frozen", "frame", "kakao"], ["fro??", "????o", "fr???", "fro???", "pro?"]))
