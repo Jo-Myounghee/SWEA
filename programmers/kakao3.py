@@ -8,9 +8,7 @@ def solution(words, queries):
                 continue
             else:
                 for k in range(len(i)):
-                    if i[k] == '?':
-                        continue
-                    elif i[k] != '?' and i[k] != j[k]:
+                    if i[k] != '?' and i[k] != j[k]:
                         no_same = True
                         break
                 if not no_same:
