@@ -1,7 +1,8 @@
 def solution(words, queries):
     answer = [0] * len(queries)
     for i in range(len(queries)):
-
+        same_visited = []
+        no_same_visited = []
         cnt = 0
         for j in words:
             if len(queries[i]) != len(j):
@@ -11,17 +12,27 @@ def solution(words, queries):
                 if queries[i] == '?'*len(queries[i]):
                     cnt += 1
 
+                elif j in same_visited:
+                    cnt += 1
+
+                elif j in no_same_visited:
+                    continue
+
                 elif queries[i][k] == '?':
                     temp_word = queries[i][::-1]
                     k = len(j) - temp_word.index('?')
                     if queries[i][k:] == j[k:]:
                         cnt += 1
-
+                        same_visited.append(j)
+                        continue
+                    no_same_visited.append(j)
                 else:
                     k = queries[i].index('?')
                     if queries[i][:k] == j[:k]:
                         cnt += 1
-
+                        same_visited.append(j)
+                        continue
+                    no_same_visited.append(j)
         answer[i] = cnt
     return answer
 
