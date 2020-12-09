@@ -1,10 +1,7 @@
-def factorial(n, answer):
-    if n == 1:
-        return answer
-    elif n == 0:
-        return 0
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
     else:
-        answer *= n
-        return factorial(n-1, answer)
+        return n * factorial(n-1)
 
-print(factorial(int(input()), 1))
+print(factorial(int(input())))
