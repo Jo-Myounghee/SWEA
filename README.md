@@ -1,68 +1,33 @@
-[TOC]
-
 # 🐢Algorithms🐇
 
->  파일명: 문제출처_문제번호.py
->
-<<<<<<< HEAD
-> git commit -m: 문제출처_문제번호
 
 
+## 🔥 SWEA
 
-# 👓 SWEA 
+> https://github.com/Jo-Myounghee/Algorithm/tree/master/SWEA
 
->  [SWEA][https://swexpertacademy.com/main/main.do]
+- [SWEA](https://swexpertacademy.com/main/main.do)문제 풀이 저장소입니다.
 
-## ✏ ing 
+## 🔥 BOJ
 
-> 파일명: 문제레벨_문제번호.py
+> https://github.com/Jo-Myounghee/Algorithm/tree/master/BOJ
 
-## 👓 D2
+- [백준](https://www.acmicpc.net/)문제 풀이 저장소입니다.
 
-### 1926. 간단한 369게임
+## 🔥 JUNGOL
 
-[1926][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1926.md]
+> https://github.com/Jo-Myounghee/Algorithm/tree/master/JUNGOL
 
-### 1948.날짜 계산기
+- [정올](http://jungol.co.kr/) 문제 풀이 저장소입니다.
 
-[1948][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1948.md]
+## 🔥 ndbbook
 
-### 1954. 달팽이 숫자
+> https://github.com/Jo-Myounghee/Algorithm/tree/master/ndbbook
 
-[1954][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1954.md]
+- [이것이 코딩 테스트다 with파이썬 책](https://www.hanbit.co.kr/store/books/look.php?p_code=B8945183661) 예제 풀이 저장소입니다. ([git 주소](https://github.com/ndb796/python-for-coding-test))
 
-### 1961. 숫자 배열 회전
+## 🔥 LeetCode
 
-[1961][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1961.md]
+> 
 
-### 1966. 숫자를 정렬하자
-
-[1966][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1966.md]
-
-### 1970. 쉬운 거스름돈
-
-[1970][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1970.md]
-
-### 1976. 시각 덧셈
-
-[1976][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1976.md]
-
-### 1979. 어디에 단어가 들어갈 수 있을까
-
-[1979][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_1979.md]
-
-### 💬 2005. 파스칼의 삼각형
-
-[2005][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D2/swea_2005.md]
-
-## 🔹 D3
-
-### 2805. 농작물 수확하기
-
-[2805][https://github.com/Jo-Myounghee/SWEA/blob/master/SWEA/D3/swea_2805.md]
-
-## 🔹 D4
-
-## 🔹 D5
-
-## 🔹 D6
+- [LeetCode](https://leetcode.com/) 문제 풀이 저장소입니다.
