@@ -1,28 +1,32 @@
 # BFS
+
 from collections import deque
 
 n, m, k, x = map(int, input().split())
-graph = [[] for _ in range(n+1)]
+graph = [[] for i in range(n+1)]
 
 for _ in range(m):
-    a, b = map(int, input().split())
-    graph[a].append(b)
+    s, f = map(int, input().split())
+    graph[s].append(f)
 
-distance = [-1] * (n+1)
-distance[x] = 0
+visited = [-1] * (n+1)
+visited[x] = 0
 
 q = deque([x])
+
 while q:
     now = q.popleft()
     for next_node in graph[now]:
-        if distance[next_node] == -1:
-            distance[next_node] = distance[now] + 1
+        if visited[next_node] == -1:
+            visited[next_node] = visited[now] + 1
             q.append(next_node)
 
 check = False
+
 for i in range(1, n+1):
-    if distance[i] == k:
+    if visited[i] == k:
         print(i)
         check = True
-if check == False:
+
+if not check:
     print(-1)
