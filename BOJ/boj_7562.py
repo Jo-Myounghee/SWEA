@@ -7,12 +7,15 @@
 -> 5
 '''
 # BFS
+from collections import deque
+
 def BFS(x, y):
     dir = [[1, -2], [2, -1], [2, 1], [1, 2], [-1, 2], [-2, 1], [-2, -1], [-1, -2]]
     global I, end_x, end_y
-    q = [[x, y, 0]]
+    q = deque([x, y, 0])
+    print(q)
     while q:
-        nx, ny, cnt = q.pop(0)
+        nx, ny, cnt = q.popleft()
         if nx == end_x and ny == end_y:
             return cnt
         for i in range(8):
