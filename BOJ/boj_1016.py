@@ -1,18 +1,17 @@
-import math
-
 MIN, MAX = map(int, input().split())
-visited = [False] * (MAX + 1 - MIN)
-cnt = 0
+check = [0] * 1000001
 
-for i in range(2, int(math.sqrt(MAX))+1):
-    t = 1
-    test = (i**2) * t
+for i in range(2, MAX):
+    n = i**2
+    if n > MAX:
+        break
 
-    while test <= MAX:
-        if test >= MIN and not visited[test]:
-            visited[test-MIN] = True
-            cnt += 1
-        t += 1
-        test = (i**2) * t
+    start = n - (MIN % n)
 
-print(MAX-MIN+1-cnt)
+    if start == n:
+        start = 0
+
+    for j in range(start, MAX-MIN+1, n):
+        check[j] = 1
+
+print(check[:MAX-MIN+1].count(0))
