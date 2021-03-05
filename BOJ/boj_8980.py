@@ -17,26 +17,32 @@ N, C = map(int, input().split())
 M = int(input())
 items = [[] for _ in range(N)]
 inputs = [list(map(int, input().split())) for _ in range(M)]
-inputs.sort()
-for i in range(M):
-    s, g, item = inputs[i]
-    items[s].append([g, item])
-
+inputs.sort(key=lambda inputs: (inputs[1], inputs[0]))
 sends = [0] * (N+1)
 
-now_items = 0
+ans = 0
+for i in range(len(inputs)):
+    s, g, val = inputs[i]
+    max = 0
+    isBig = False
+    for k in range(s, g):
+        # 애초에 넘겨져 있다면
+        if sends[k] >= C:
+            isBig = True
+        # 만약 넘기면
+        if sends[k] < C and sends[k] + val >= C and sends[k] + val - C > max:
+            # 넘긴 값
+            max = sends[k] + val - C
+    # 넘긴게 없었다면
+    if not isBig and max == 0:
+        for k in range(s, g):
+            sends[k] += val
+        ans += val
 
-for i in range(1, N):
-    item = items[i]
-    now_items -= sends[i]
-    for j in range(len(item)):
-        item_idx = item[j][0]
-        if now_items + item[j][1] <= C:
-            item_val = item[j][1]
-        else:
-            item_val = (C-now_items)
-        
-        now_items += item_val
-        sends[item_idx] += item_val
+    # 넘긴게 있었다면
+    elif not isBig and max:
+        for k in range(s, g):
+            sends[k] += (val - max)
+        ans += (val - max)
 
-print(sum(sends))
+print(ans)
