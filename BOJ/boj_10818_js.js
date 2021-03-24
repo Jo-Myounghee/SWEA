@@ -6,27 +6,23 @@ const rl = readline.createInterface({
 });
 
 let input = [];
-let max_val = 0;
-let min_val = 1000000;
+
+const printAnswer = input => {
+  const N = parseInt(input[0])
+  let minValue = 1000001
+  let maxValue = -1000001
+  for (let i=0; i<N; i++) {
+    const value = parseInt(input[1][i])
+    minValue = minValue > value ? value : minValue;
+    maxValue = maxValue < value ? value : maxValue;
+  }
+  console.log(minValue, maxValue);
+}
 
 rl.on('line', line => {
-  const nums = line.split(' ')
-  for (i=0; i<nums.length; i++) {
-    let num = parseInt(nums[i])
-    input.push(num)
-  }
+  input.push(line.split(' '))
 })
   .on('close', () => {
-    let N = input.shift()
-    for (i=0; i<N; i++) {
-      if (input[i] < min_val) {
-        min_val = input[i]
-      } else {
-        if (input[i] > max_val) {
-          max_val = input[i]
-        }
-      }
-    }
-    console.log(min_val, max_val)
-  process.exit();
+    printAnswer(input)
+    process.exit();
 });
