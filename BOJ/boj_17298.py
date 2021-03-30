@@ -1,5 +1,6 @@
+import sys
 N = int(input())
-nums = list(map(int, input().split()))
+nums = list(map(int, sys.stdin.readline().split()))
 stack = []
 answer = [-1] * N
 
