@@ -6,10 +6,11 @@
 
 2
 '''
-N, C = map(int, input().split())
+import sys
+N, C = map(int, sys.stdin.readline().rstrip().split())
 nums = []
 for _ in range(N):
-    nums.append(int(input()))
+    nums.append(int(sys.stdin.readline().rstrip()))
 nums.sort()
 
 start = 1
