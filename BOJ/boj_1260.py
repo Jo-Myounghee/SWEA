@@ -1,3 +1,4 @@
+import sys
 from collections import deque
 
 def dfs(v):
@@ -22,10 +23,10 @@ def bfs(v):
                 visited_bfs[i] = True
 
 
-N, M, V = map(int, input().split())
+N, M, V = map(int, sys.stdin.readline().strip().split())
 graph = [[] for _ in range(N+1)]
 for i in range(M):
-    s, g = map(int, input().split())
+    s, g = map(int, sys.stdin.readline().strip().split())
     graph[s].append(g)
     graph[g].append(s)
 
@@ -43,5 +44,3 @@ bfs(V)
 
 print(*dfs_ans)
 print(*bfs_ans)
-
-# dfs(V)
