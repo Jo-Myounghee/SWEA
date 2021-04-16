@@ -29,13 +29,13 @@ def dfs(_x, _y, cnt):
 
     maxSize = 0
 
-    # 붙일 수 있는 가장 큰 색종이의 크기
-    for size in range(5, 0, -1):
-        if isok(_x, _y, size):
-            maxSize = size
-            break
     # 탐색하다가 색종이를 붙일 수 있는 지점을 만나면
     if board[_y][_x] == 1:
+        # 붙일 수 있는 가장 큰 색종이의 크기
+        for size in range(5, 0, -1):
+            if canAttach(_x, _y, size):
+                maxSize = size
+                break
         # 가장 큰 사이즈의 색종이부터 붙여본다.
         for size in range(maxSize, 0, -1):
             # 현재 사용하려는 색종이의 사용 횟수가 5번을 넘지 않는다면
