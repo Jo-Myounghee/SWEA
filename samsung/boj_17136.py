@@ -1,4 +1,4 @@
-def isok(_x, _y, size):
+def canAttach(_x, _y, size):
     for y in range(_y, _y + size):
         for x in range(_x, _x + size):
             if x < 0 or x >= 10 or y < 0 or y >= 10 or board[y][x] == 0:
@@ -11,7 +11,7 @@ def attach(_x, _y, size, tf):
             board[y][x] = tf
 
 def dfs(_x, _y, cnt):
-    global minAns
+    global ans
 
     # 완탐시 줄바꿈이 필요할 때
     if _x >= 10:
@@ -19,12 +19,12 @@ def dfs(_x, _y, cnt):
         _y += 1
 
     # 마지막 지점에 도착했을 때
-    if (_x, _y) == (9, 9):
-        minAns = min(cnt, minAns)
+    if (_x, _y) == (0, 10):
+        ans = min(cnt, ans)
         return
 
-    # 만약 count가 minAns보다 클 때
-    if cnt >= minAns:
+    # 만약 count가 ans(현재 최소 값)보다 클 때
+    if cnt >= ans:
         return
 
     maxSize = 0
@@ -55,8 +55,8 @@ def dfs(_x, _y, cnt):
     else:
         dfs(_x+1, _y, cnt)
 
-minAns = 1e9
+ans = 1e9
 papers = [-1, 5, 5, 5, 5, 5]
 board = [list(map(int, input().split())) for _ in range(10)]
 dfs(0, 0, 0)
-print(minAns if minAns < 1e9 else -1)
+print(ans if ans < 1e9 else -1)
