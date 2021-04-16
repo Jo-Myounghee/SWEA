@@ -47,7 +47,7 @@ N, M, sx, sy, K = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(N)]
 dirs = list(map(int, input().split()))
 dice = [0] * 7
-nx, ny = sx, sy
+nx, ny = sy, sx
 ans = []
 
 rotate()
