@@ -101,7 +101,6 @@ def findSum(x, y):
 
 N, M = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(N)]
-visited = [[0]*M for _ in range(N)]
 ans = 0
 
 for y in range(N):
