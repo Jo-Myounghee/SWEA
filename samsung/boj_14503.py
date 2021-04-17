@@ -39,11 +39,13 @@ def clean(x, y, d, cnt):
 
     if no_cnt == 4:
         if board[ny][nx] == 1:
-            return
+            print(cnt)
+            exit()
     if visited[ny][nx] == 0:
         clean(nx, ny, nd, cnt+1)
     else:
         clean(nx, ny, nd, cnt)
+
 
 
 N, M = map(int, input().split())
@@ -54,9 +56,6 @@ board = [list(map(int, input().split())) for _ in range(N)]
 visited = [[0]*M for _ in range(N)]
 answer = 0
 clean(sx, sy, sd, 1)
-for i in range(len(visited)):
-    answer = max(answer, max(visited[i]))
-print(answer)
 
 '''
 6 6
