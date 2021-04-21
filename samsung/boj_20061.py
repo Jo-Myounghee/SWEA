@@ -22,14 +22,16 @@ def solve(block_type, c, board):
 
     # 줄 없애기
     full_row = []
-    for i in range(6):
-        if sum(board[i]) == 6:
+    for i in range(5, -1, -1):
+        if sum(board[i]) == 4:
             full_row.append(i)
             scores += 1
 
-    while full_row:
-        idx = full_row.pop()
+    pop_row_num = len(full_row)
+    for idx in full_row:
         board.pop(idx)
+
+    for _ in range(pop_row_num):
         board.insert(0, [0]*4)
 
     # 0, 1행 확인
