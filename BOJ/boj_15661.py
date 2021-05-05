@@ -1,32 +1,38 @@
-from itertools import combinations, permutations
+def cal_team(lst):
+    sum_team = 0
+    for _i in range(len(lst)):
+        for _j in range(len(lst)):
+            if _i != _j:
+                i, j = lst[_i], lst[_j]
+                sum_team += board[i][j]
+    return sum_team
+
+def comb(s, cnt, n):
+    global min_ans, visited
+    if cnt == n:
+        team1, team2 = [], []
+        for i in range(N):
+            if visited[i]:
+                team1.append(i)
+            else:
+                team2.append(i)
+        if len(team1) * len(team2) == 0:
+            return
+        sum_team1 = cal_team(team1)
+        sum_team2 = cal_team(team2)
+        min_ans = min(min_ans, abs(sum_team1 - sum_team2))
+        return
+    for i in range(s, N):
+        visited[i] = True
+        comb(i+1, cnt+1, n)
+        visited[i] = False
 
 N = int(input())
 board = [list(map(int, input().split())) for _ in range(N)]
-nums = range(N)
+min_ans = 1e9
+team1, team2 = [], []
 
-min_val = 1e9
+visited = [False] * N
 for i in range(1, N//2+1):
-    team1 = list(combinations(nums, i))
-    for j in range(len(team1)):
-        team2 = [list(range(N)) for _ in range(len(team1))]
-        for k in range(len(team1[j])):
-            team2[j].remove(team1[j][k])
-        for j in range(len(team1)):
-            temp_team1_sum = 0
-            temp_team2_sum = 0
-            if len(team1[j]) > 1:
-                temp_team1 = list(combinations(team1[j], 2))
-                for k in range(len(temp_team1)//2):
-                    temp_team1_sum += board[temp_team1[k][0]][temp_team1[k][1]]
-                    temp_team1_sum += board[temp_team1[k][1]][temp_team1[k][0]]
-            if len(team2[j]) > 1:
-                temp_team2 = list(combinations(team2[j], 2))
-                for k in range(len(temp_team2)//2):
-                    temp_team2_sum += board[temp_team2[k][0]][temp_team2[k][1]]
-                    temp_team2_sum += board[temp_team2[k][1]][temp_team2[k][0]]
-            
-            temp_min = abs(temp_team1_sum-temp_team2_sum)
-            if temp_min < min_val:
-                min_val = temp_min
-
-print(min_val)
+    comb(0, 0, i)
+print(min_ans)
