@@ -1,53 +1,80 @@
-from itertools import permutations
+def play():
+    cur = 0
+    inning = 0
+    out = 0
+    score = 0
+    lu1, lu2, lu3 = 0, 0, 0
 
-# 순열로 팀짜기
-#
-# def perm(idx, n, k):
-#     global temp, A
-#     # print(n)
-#     if n == k:
-#         B = [0]*len(A)
-#         for i in range(len(A)):
-#             B[i] = A[i]
-#         if not B in temp[idx]:
-#             temp[idx].append(B)
-#
-#     else:
-#         for i in range(n, k):
-#             A[n], A[i] = A[i], A[n]
-#             perm(idx, n+1, k)
-#             A[n], A[i] = A[i], A[n]
-#     return
+    while True:
+        player = data[inning][order[cur] - 1]
+        if player == 0:
+            out += 1
+            if out == 3:
+                out = 0
+                inning += 1
+                lu1 = lu2 = lu3 = 0
+                if inning == N:
+                    return score
+        elif player == 1:
+            if lu3:
+                score += 1
+                lu3 = 0
+            if lu2:
+                lu3, lu2 = 1, 0
+            if lu1:
+                lu2, lu1 = 1, 0
+            lu1 = 1
+
+        elif player == 2:
+            if lu3:
+                score += 1
+                lu3 = 0
+            if lu2:
+                score += 1
+                lu2 = 0
+            if lu1:
+                lu3, lu1 = 1, 0
+            lu2 = 1
+
+        elif player == 3:
+            if lu3:
+                score += 1
+                lu3 = 0
+            if lu2:
+                score += 1
+                lu2 = 0
+            if lu1:
+                score += 1
+                lu1 = 0
+            lu3 = 1
+
+        else:
+            score += (lu1 + lu2 + lu3 + 1)
+            lu1 = lu2 = lu3 = 0
+
+        cur = (cur + 1) % 9
+
+
+def perm(cnt, num):
+    global answer
+    if cnt == 8:
+        answer = max(answer, play())
+        return
+
+    for i in range(9):
+        if order[i]:
+            continue
+        order[i] = num
+        perm(cnt + 1, num + 1)
+        order[i] = 0
 
 
 N = int(input())
-board = [list(map(int, input().split())) for _ in range(N)]
+data = [list(map(int, input().split())) for _ in range(N)]
 
-temp = [[] for _ in range(N)]
-for i in range(len(board)):
-    A = board[i][:3]+board[i][4:]
+order = [0] * 9
+order[3] = 1
+answer = 0
 
-    tmp = list(set(permutations(A)))
-    # 현재 최고 점수, 멈춘 idx
-    now_score, now_idx = 0, 0
-    for j in range(len(tmp)):
-        tmp[j] = [board[i][3]] + list(tmp[j])
-
-
-
-
-
-# now = [] # 여기에 (획득 점수, 멈춘 idx) 담기
-# now_lst = [[] for _ in range(N)]
-# now_score = 0 # 획득 점수
-# max_score = 0 # 현재 가장 높은 점수
-# for i in range(len(temp)):
-#     for j in range(len(temp[i])):
-#         temp[i][j] = [board[i][3]] + temp[i][j]
-#         out = 0
-#         for k in range(9):
-#             if out == 3 and now_score > max_score:
-#
-#             if temp[i][j][k] == 0:
-#                 out += 1
-        # print(temp[i][j])
+perm(0, 2)
+print(answer)
