@@ -33,29 +33,20 @@ def game():
                 group.append((nx, ny))
                 for i in range(4):
                     tx, ty = nx + dx[i], ny + dy[i]
-                    # if is_board(tx, ty):
-                    #     # 무지개라면
-                    #     if board[ty][tx] == 0 and not rainbow_visited[ty][tx]:
-                    #         rainbow_cnt += 1
-                    #         rainbow_visited[ty][tx] += 1
-                    #     elif board[ty][tx] == now_color and not visited[ty][tx]:
-                    #         if ty < _standard_block[1]:
-                    #             _standard_block = (tx, ty)
-                    #         elif ty == _standard_block[1] and tx < _standard_block[0]:
-                    #             _standard_block = (tx, ty)
-                    #         visited[ty][tx] = True
-                    #     q.append((tx, ty))
-
-                    if is_board(tx, ty) and not visited[ty][tx] and board[ty][tx] in [0, now_color]:
-                        if board[ty][tx] == now_color:
+                    if is_board(tx, ty):
+                        # 무지개라면
+                        if board[ty][tx] == 0 and not rainbow_visited[ty][tx]:
+                            rainbow_cnt += 1
+                            rainbow_visited[ty][tx] = True
+                            q.append((tx, ty))
+                        # 일반 블록이라면
+                        elif board[ty][tx] == now_color and not visited[ty][tx]:
                             if ty < _standard_block[1]:
                                 _standard_block = (tx, ty)
                             elif ty == _standard_block[1] and tx < _standard_block[0]:
                                 _standard_block = (tx, ty)
-                        else:
-                            rainbow_cnt += 1
-                        q.append((tx, ty))
-                        visited[ty][tx] = True
+                            visited[ty][tx] = True
+                            q.append((tx, ty))
             return group, _standard_block, rainbow_cnt
 
         for y in range(N):
@@ -66,17 +57,21 @@ def game():
                     if len(temp_block_group) > len(block_group):
                         block_group = temp_block_group
                         standard_block = temp_standard_block
+                        rainbows = temp_rainbows
                     elif len(temp_block_group) == len(block_group):
                         if rainbows < temp_rainbows:
                             block_group = temp_block_group
                             standard_block = temp_standard_block
+                            rainbows = temp_rainbows
                         elif rainbows == temp_rainbows:
                             if standard_block[1] < temp_standard_block[1]:
                                 block_group = temp_block_group
                                 standard_block = temp_standard_block
+                                rainbows = temp_rainbows
                             elif standard_block[1] == temp_standard_block[1] and standard_block[0] < temp_standard_block[0]:
                                 block_group = temp_block_group
                                 standard_block = temp_standard_block
+                                rainbows = temp_rainbows
         return block_group
 
     def delete_block_group(blocks):
@@ -122,21 +117,11 @@ def game():
         if len(block_group) <= 1:
             break
         delete_block_group(block_group)
-        print(block_group, '삭제할 것')
-        for i in range(N):
-            print(*board[i], '삭제 후')
         # 점수 추가
         score += (len(block_group)**2)
         active_gravity()
-        for i in range(N):
-            print(*board[i], '중력 후')
         board = rotate_board()
-        for i in range(N):
-            print(*board[i], '회전 후')
         active_gravity()
-        for i in range(N):
-            print(*board[i], '중력 후')
-        print('===========')
     return score
 
 
