@@ -30,7 +30,7 @@ def game():
                 tx, ty = nx + _dx[i], ny + _dy[i]
                 if not is_wall(tx, ty):
                     new_pos.append((tx, ty))
-        return new_pos
+        return list(set(new_pos))
 
     while walls:
         walls, temp_board = move_walls()
