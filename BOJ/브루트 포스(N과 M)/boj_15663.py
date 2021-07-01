@@ -1,7 +1,7 @@
 def func(cnt):
     global N, M, answer, answer_lst
     if cnt == M:
-        now = " ".join(answer)
+        now = " ".join(map(str, answer))
         if not now in answer_lst:
             answer_lst[now] = True
             real_answer.append(now)
@@ -14,8 +14,9 @@ def func(cnt):
             answer.pop()
             visited[i] = False
 
+
 N, M = map(int, input().split())
-inputs = list(map(str, input().split()))
+inputs = list(map(int, input().split()))
 inputs.sort()
 answer = []
 answer_lst = dict()
