@@ -11,7 +11,6 @@ def solution():
         graph[x].append(y)
         indegree[y] += 1
     GOAL = int(input())
-    # start 지점 찾기(최상단 노드)
     start = []
     for i in range(1, N+1):
         if indegree[i] == 0:
