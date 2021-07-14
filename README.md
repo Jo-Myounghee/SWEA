@@ -1,7 +1,5 @@
 # 🐢Algorithms🐇
 
-
-
 ## 🔥 SWEA
 
 > https://github.com/Jo-Myounghee/Algorithm/tree/master/SWEA
@@ -28,6 +26,6 @@
 
 ## 🔥 LeetCode
 
-> 
+> https://github.com/Jo-Myounghee/LeetCode
 
 - [LeetCode](https://leetcode.com/) 문제 풀이 저장소입니다.
